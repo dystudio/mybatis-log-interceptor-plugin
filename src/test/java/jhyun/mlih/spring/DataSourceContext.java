@@ -15,7 +15,7 @@ public class DataSourceContext {
 		bds.setDriverClassName("org.h2.Driver");
 		bds.setUsername("sa");
 		bds.setPassword("");
-		bds.setUrl("jdbc:h2:foo;MODE=Oracle");
+		bds.setUrl("jdbc:h2:mem:;MODE=Oracle");
 		bds.setMaxActive(10);
 		bds.setMaxIdle(2);
 		bds.setPoolPreparedStatements(true);

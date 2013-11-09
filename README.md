@@ -1,4 +1,4 @@
-mybatis-log-interceptor-hello
+mybatis-log-interceptor-plugin
 =============================
 
-mybatis-log-interceptor-hello
+mybatis-log-interceptor-plugin

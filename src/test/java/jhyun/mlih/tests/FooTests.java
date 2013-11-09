@@ -1,9 +1,9 @@
 package jhyun.mlih.tests;
 
 import jhyun.mlih.entities.Foo;
+import jhyun.mlih.junit.MyTestCase;
 import jhyun.mlih.services.FooJdbcService;
 import jhyun.mlih.services.FooService;
-import jhyun.mlih.spring.MyTestCase;
 
 import org.junit.Assert;
 import org.junit.Before;
