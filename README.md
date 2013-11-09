@@ -35,9 +35,16 @@ mybatis-log-interceptor-plugin
 
 
 2. add dependencies to `pom.xml`:
-  * you need `commons-jexl`, `slf4j-api`, `mybatis`, and `mybatis-log-interceptor-plugin`. ;-)
+  * you need `commons-lang3`, `commons-jexl`, `slf4j-api`, `mybatis`, and `mybatis-log-interceptor-plugin`. ;-)
 
 ```xml
+<dependency>
+    <groupId>org.apache.commons</groupId>
+    <artifactId>commons-lang3</artifactId>
+    <version>3.1</version>
+    <scope>provided</scope>
+</dependency>
+
 <dependency>
     <groupId>org.apache.commons</groupId>
     <artifactId>commons-jexl</artifactId>
