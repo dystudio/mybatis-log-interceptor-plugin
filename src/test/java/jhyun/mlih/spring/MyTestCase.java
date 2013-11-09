@@ -1,4 +1,4 @@
-package jhyun.mlih.tests;
+package jhyun.mlih.spring;
 
 import jhyun.mlih.spring.RootContext;
 

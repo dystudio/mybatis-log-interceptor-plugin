@@ -2,6 +2,7 @@ package jhyun.mlih.tests;
 
 import jhyun.mlih.services.FooJdbcService;
 import jhyun.mlih.services.FooService;
+import jhyun.mlih.spring.MyTestCase;
 
 import org.junit.Before;
 import org.junit.Test;
