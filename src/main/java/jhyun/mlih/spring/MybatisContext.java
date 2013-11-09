@@ -4,6 +4,9 @@ import java.io.IOException;
 
 import javax.sql.DataSource;
 
+import jhyun.mlih.mybatis.MybatisLogInterceptor;
+
+import org.apache.ibatis.plugin.Interceptor;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,7 +38,7 @@ public class MybatisContext {
 		ssfb.setDataSource(dataSource);
 		ssfb.setMapperLocations(mybatisMapperLocations(resourceLoader,
 				MYBATIS_MAPPER_LOCATIONS));
-		// ssfb.setPlugins(new Interceptor[] { new MybatisLogInterceptor(), });
+		ssfb.setPlugins(new Interceptor[] { new MybatisLogInterceptor(), });
 		return ssfb;
 	}
 
