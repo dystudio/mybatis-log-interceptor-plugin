@@ -8,7 +8,7 @@
 	<packaging>jar</packaging>
 
 	<name>mybatis-log-interceptor-plugin</name>
-	<url>http://maven.apache.org</url>
+	<url>https://github.com/ageldama/mybatis-log-interceptor-plugin</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -35,7 +35,7 @@
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
 			<version>15.0</version>
-			<scope>test</scope>			
+			<scope>test</scope>
 		</dependency>
 
 
@@ -110,14 +110,14 @@
 			<version>${version.slf4j}</version>
 			<scope>test</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>${version.slf4j}</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<!-- ..with log4j-12. -->
 			<groupId>org.slf4j</groupId>
@@ -259,6 +259,33 @@
 						<include>**/jhyun/mlih/tests/*Tests.java</include>
 					</includes>
 				</configuration>
+			</plugin>
+
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
