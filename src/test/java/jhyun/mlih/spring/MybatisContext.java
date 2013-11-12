@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javax.sql.DataSource;
 
+import jhyun.mlih.mybatis.DoNothingInterceptor;
 import jhyun.mlih.mybatis.MybatisLogInterceptor;
 
 import org.apache.ibatis.plugin.Interceptor;
@@ -38,7 +39,11 @@ public class MybatisContext {
 		ssfb.setDataSource(dataSource);
 		ssfb.setMapperLocations(mybatisMapperLocations(resourceLoader,
 				MYBATIS_MAPPER_LOCATIONS));
-		ssfb.setPlugins(new Interceptor[] { new MybatisLogInterceptor(), });
+		ssfb.setPlugins(new Interceptor[] {//
+		// new MybatisLogInterceptor(),//
+		new DoNothingInterceptor(),//
+		});
+
 		return ssfb;
 	}
 
