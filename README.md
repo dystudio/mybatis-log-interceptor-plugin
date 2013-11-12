@@ -4,6 +4,10 @@ mybatis-log-interceptor-plugin
 * display parameter bound SQLs for your MyBatis Mappers.
 
 
+**WARN: DO NOT USE THIS!!!!**
+===============================
+* IT'S TROUBLESOME WITH `<foreach/>`s.
+
 # usage
 
 1. add repositories to `pom.xml`:

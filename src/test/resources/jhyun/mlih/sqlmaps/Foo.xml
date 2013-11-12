@@ -29,7 +29,7 @@
 		SELECT	ID
 		FROM 	FOO
 		WHERE 	ID IN
-			]]><foreach collection="item"  item="item" open="(" separator="," close=")">
+			]]><foreach collection="list"  item="item" open="(" separator="," close=")">
 		 		#{item}
 		 	</foreach>
 	</select> 
