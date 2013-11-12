@@ -24,6 +24,16 @@
 	]]>		
 	</select> 
 	
+	<select id="selectMany" parameterType="list" resultType="jhyun.mlih.entities.Foo">
+	<![CDATA[
+		SELECT	ID
+		FROM 	FOO
+		WHERE 	ID IN
+			]]><foreach collection="item"  item="item" open="(" separator="," close=")">
+		 		#{item}
+		 	</foreach>
+	</select> 
+	
 
 	<select id="newFooId" resultType="int" flushCache="true">
 		SELECT FOO_ID_SEQ.NEXTVAL FROM DUAL

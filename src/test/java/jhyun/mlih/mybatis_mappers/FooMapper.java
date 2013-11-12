@@ -12,6 +12,8 @@ public interface FooMapper {
 
 	public Foo selectOne(int id);
 
+	public List<Foo> selectMany(List<Integer> ids);
+
 	public int newFooId();
 
 	public void insert(Foo foo);

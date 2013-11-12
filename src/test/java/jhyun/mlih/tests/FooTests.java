@@ -1,5 +1,7 @@
 package jhyun.mlih.tests;
 
+import java.util.Arrays;
+
 import jhyun.mlih.entities.Foo;
 import jhyun.mlih.junit.MyTestCase;
 import jhyun.mlih.services.FooJdbcService;
@@ -30,6 +32,11 @@ public class FooTests extends MyTestCase {
 		fooService.insert(new Foo(fooService.newFooId()));
 		final long after = fooService.count();
 		Assert.assertTrue(before < after);
+	}
+
+	@Test
+	public void selectMany() {
+		fooService.selectMany(Arrays.asList(1, 2, 3));
 	}
 
 }

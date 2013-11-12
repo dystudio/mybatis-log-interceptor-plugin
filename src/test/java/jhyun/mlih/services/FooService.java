@@ -28,6 +28,10 @@ public class FooService {
 		return fooMapper.selectOne(id);
 	}
 
+	public List<Foo> selectMany(List<Integer> ids) {
+		return fooMapper.selectMany(ids);
+	}
+
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor = { Throwable.class })
 	public int newFooId() {
 		return fooMapper.newFooId();
